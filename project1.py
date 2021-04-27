@@ -1,6 +1,7 @@
 print("___________________________________\n")
 print("Welcome to Python Calculator")
 print("___________________________________\n")
+#Arithmetic Calculator functions|||||||||||||||||||||||||||||||||||||||||||||||||||||
 # Addition calculation
 def addition():
     a=int(input("Enter first number\n"))
@@ -74,6 +75,15 @@ def modulus():
     else:
         print("Please enter a valid value of divisor")
 
+#Advance Calculator functions|||||||||||||||||||||||||||||||||||||||||||||||||||||
+def HCF():
+    a=int(input("Enter first number\n"))
+    b=int(input("Enter second number\n"))
+    if(b==0):
+        return a
+    else:
+        return HCF(b,a%b)
+
 def arithmetic_operation():
     print("____________________________________")
     print("\nWelcome to Arithmetic Calculator")
@@ -89,7 +99,7 @@ def arithmetic_operation():
     elif n==2:
         subtraction()
     elif n==3:
-        multiplication
+        multiplication()
     elif n==4:
         division()
     elif n==5:
@@ -98,9 +108,27 @@ def arithmetic_operation():
         print("Enter a valid input\n")
     
 def advance_operation():
-    print("Press 1 for HCF")
-    print("Press 1 for addition")
-    print("Press 1 for addition")
+    print("____________________________________")
+    print("\nWelcome to Advance Calculator")
+    print("____________________________________\n")
+    print("\nPress 1 for HCF/GCD................")
+    print("Press 2 for Power of a number........")
+    print("Press 3 for Square root of a number..")
+    print("Press 4 for Factorial of a number....")
+    print("Press 5 to check prime or not......\n")
+    n=int(input("Enter your choice for Advance Operation\n"))
+    if n==1:
+        print()HCF()
+    elif n==2:
+        power()
+    elif n==3:
+        square_root()
+    elif n==4:
+        fact()
+    elif n==5:
+        print("Given number is prime ",prime())
+    else:
+        print("Enter a valid input\n")
 
 def take_input():
     print("Press 1 for Arithmetic Operation")
