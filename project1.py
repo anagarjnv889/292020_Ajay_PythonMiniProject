@@ -3,11 +3,26 @@ print("Welcome to Python Calculator")
 print("___________________________________\n")
 
 def addition():
-    
+    a=int(input("Enter first number\n"))
+    b=int(input("Enter second number\n"))
+    return a+b
+
 def subtraction():
+    a=int(input("Enter first number\n"))
+    b=int(input("Enter second number\n"))
+    return a-b
 def multiplication():
+    a=int(input("Enter first number\n"))
+    b=int(input("Enter second number\n"))
+    return a*b
 def division():
+    a=int(input("Enter first number\n"))
+    b=int(input("Enter second number\n"))
+    return a/b
 def modulus():
+    a=int(input("Enter first number\n"))
+    b=int(input("Enter second number\n"))
+    return a%b
 
 def arithmetic_operation():
     print("____________________________________")
