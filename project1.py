@@ -1,28 +1,78 @@
 print("___________________________________\n")
 print("Welcome to Python Calculator")
 print("___________________________________\n")
-
+# Addition calculation
 def addition():
     a=int(input("Enter first number\n"))
     b=int(input("Enter second number\n"))
-    return a+b
-
+    print("Sum of",a,"and",b,"is -> ",a+b)
+    print("Would you like to continue, then press 1, otherwise press 0")
+    n=int(input("Enter your choice 1/0 \n"))
+    if n==1:
+        take_input()
+    elif n==0:
+        print("Thank you")
+    else:
+        print("Enter a valid input")
+# Subtraction calculation
 def subtraction():
     a=int(input("Enter first number\n"))
     b=int(input("Enter second number\n"))
-    return a-b
+    print("Difference of",a,"and",b,"is -> ",a-b)
+    print("Would you like to continue, then press 1, otherwise press 0")
+    n=int(input("Enter your choice 1/0 \n"))
+    if n==1:
+        take_input()
+    elif n==0:
+        print("Thank you")
+    else:
+        print("Enter a valid input")
+# Multiplication calculation
 def multiplication():
     a=int(input("Enter first number\n"))
     b=int(input("Enter second number\n"))
-    return a*b
+    print("Multiplication of",a,"and",b,"is -> ",a*b)
+    print("Would you like to continue, then press 1, otherwise press 0")
+    n=int(input("Enter your choice 1/0 \n"))
+    if n==1:
+        take_input()
+    elif n==0:
+        print("Thank you")
+    else:
+        print("Enter a valid input")
+# Division calculation
 def division():
     a=int(input("Enter first number\n"))
     b=int(input("Enter second number\n"))
-    return a/b
+    if b>0:
+        print("Division of",a,"and",b,"is ->",a/b)
+        print("Would you like to continue, then press 1, otherwise press 0")
+        n=int(input("Enter your choice 1/0 \n"))
+        if n==1:
+            take_input()
+        elif n==0:
+            print("Thank you")
+        else:
+            print("Enter a valid input")
+    else:
+        print("Please enter a valid value of divisor")
+    
+# Modulus calculation
 def modulus():
     a=int(input("Enter first number\n"))
     b=int(input("Enter second number\n"))
-    return a%b
+    if b>0:
+        print("Modulus of",a,"and",b,"is ->",a%b)
+        print("Would you like to continue, then press 1, otherwise press 0")
+        n=int(input("Enter your choice 1/0 \n"))
+        if n==1:
+            take_input()
+        elif n==0:
+            print("Thank you")
+        else:
+            print("Enter a valid input")
+    else:
+        print("Please enter a valid value of divisor")
 
 def arithmetic_operation():
     print("____________________________________")
@@ -35,15 +85,15 @@ def arithmetic_operation():
     print("Press 5 for Modulus.................\n")
     n=int(input("Enter your choice for Arithmetic Operation\n"))
     if n==1:
-        print(addition())
+        addition()
     elif n==2:
-        print(subtraction())
+        subtraction()
     elif n==3:
-        print(multiplication())
+        multiplication
     elif n==4:
-        print(division())
+        division()
     elif n==5:
-        print(modulus())
+        modulus()
     else:
         print("Enter a valid input\n")
     
