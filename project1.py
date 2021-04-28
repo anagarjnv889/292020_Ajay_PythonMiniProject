@@ -76,13 +76,83 @@ def modulus():
         print("Please enter a valid value of divisor")
 
 #Advance Calculator functions|||||||||||||||||||||||||||||||||||||||||||||||||||||
-def HCF():
-    a=int(input("Enter first number\n"))
-    b=int(input("Enter second number\n"))
+#HCF calculation
+def HCF(a,b):
     if(b==0):
         return a
     else:
         return HCF(b,a%b)
+
+#Power calculation
+def power():
+    a=int(input("Enter the base number\n"))
+    b=int(input("Enter the power number\n"))
+    print(a,"raise to the power",b,"is ->",a**b)
+    print("Would you like to continue, then press 1, otherwise press 0")
+    x=int(input("Enter your choice 1/0 \n"))
+    if x==1:
+        take_input()
+    elif x==0:
+        print("Thank you")
+    else:
+        print("Enter a valid input")
+
+#Square root calculation
+def square_root():
+    a=int(input("Enter the number\n"))
+    print("Square root of",a,"is -> ",a**0.5)
+    x=int(input("Enter your choice 1/0 \n"))
+    if x==1:
+        take_input()
+    elif x==0:
+        print("Thank you")
+    else:
+        print("Enter a valid input")
+    
+# Factorial calculation
+def fact():
+    n=int(input("Enter the number for which you want to calculate factorial\n"))
+    if n<0:
+        print("Factorial of a negative number is not possilbe. Please enter a positive number.")
+    elif n==0:
+        print("Factorial of",n,"is -> ",1)
+    else:
+        f=1
+        for i in range(1,n+1):
+            f=f*i
+        print("Factorial of",n,"is -> ",f)
+    x=int(input("Enter your choice 1/0 \n"))
+    if x==1:
+        take_input()
+    elif x==0:
+        print("Thank you")
+    else:
+        print("Enter a valid input")
+
+# Prime check
+def prime():
+    n=int(input("Enter a number\n"))
+    flag=True
+    if(n<0):
+        print("Enter a positive number.")
+    elif n==1 or n==0:
+        print("Neither prime nor composite number.")
+    else:
+        for i in range(2,n):
+            if n%i==0:
+                flag=False
+                break
+        if flag:
+            print(n,"is a prime number.")
+        else:
+            print(n,"is not a prime number.")
+    x=int(input("Enter your choice 1/0 \n"))
+    if x==1:
+        take_input()
+    elif x==0:
+        print("Thank you")
+    else:
+        print("Enter a valid input")
 
 def arithmetic_operation():
     print("____________________________________")
@@ -118,7 +188,9 @@ def advance_operation():
     print("Press 5 to check prime or not......\n")
     n=int(input("Enter your choice for Advance Operation\n"))
     if n==1:
-        print()HCF()
+        a=int(input("Enter first number\n"))
+        b=int(input("Enter second number\n"))
+        print("HCF of",a,"and",b,"is -> ",HCF(a,b))
     elif n==2:
         power()
     elif n==3:
@@ -126,7 +198,7 @@ def advance_operation():
     elif n==4:
         fact()
     elif n==5:
-        print("Given number is prime ",prime())
+        prime()
     else:
         print("Enter a valid input\n")
 
