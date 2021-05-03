@@ -1,5 +1,5 @@
 print("___________________________________\n")
-print("Welcome to Python Calculator ")
+print("Welcome to Python Calculator")
 print("___________________________________\n")
 
 
